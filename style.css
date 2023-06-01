@@ -58,10 +58,7 @@
   display: grid;
   place-content: center;
   z-index: -999;
-  animation: open 3s;
-  transition: all 1s;
   backdrop-filter: blur(5px);
-  transform: scale(0);
 }
 
 .box-modal {
@@ -76,6 +73,8 @@
   text-align: center;
   border-radius: 0.4rem;
   padding: 3rem;
+  animation: open 1s;
+  transition: all 0.3s;
 }
 
 .box-modal h2 {
@@ -106,11 +105,10 @@
     opacity: 0;
   }
   100% {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
 .open-modal {
   z-index: 999;
-  transform: scale(1);
 }
