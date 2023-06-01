@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero {
+  background: url(./fontsite.jpg) no-repeat center/cover fixed;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 80vw;
+  text-align: center;
+  max-width: 600px;
+  min-height: 30vh;
+  border-radius: 0.4rem;
+  box-shadow: rgba(26, 26, 35, 0.2) 0px 7px 29px 0px;
+  padding: 3rem;
+  background-color: #eaeaea;
+  display: grid;
+}
+
+.box h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-block: 1rem;
+}
+
+.btn {
+  border: 2px solid #5bc0eb;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  letter-spacing: 3px;
+
+  background-color: #5bc0eb;
+  margin: 1rem auto;
+  padding: 0.35rem 0.7rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #5bc0eb;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  z-index: -999;
+  animation: open 3s;
+  transition: all 1s;
+  backdrop-filter: blur(5px);
+  transform: scale(0);
+}
+
+.box-modal {
+  display: grid;
+  align-items: center;
+  position: relative;
+  box-shadow: rgba(26, 26, 35, 0.2) 0px 7px 29px 0px;
+  width: 80vw;
+  max-width: 600px;
+  min-height: 30vh;
+  background: #eaeaea;
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 3rem;
+}
+
+.box-modal h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-block: 1rem;
+}
+
+.box-modal .btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  font-size: 2rem;
+  background: none;
+  color: rgb(199, 13, 13);
+  transition: all 0.5s;
+}
+
+.box-modal .btn-close:hover {
+  transform: rotate(360deg);
+}
+
+/* animation ouverture modale */
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.open-modal {
+  z-index: 999;
+  transform: scale(1);
+}
